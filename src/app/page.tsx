@@ -32,16 +32,17 @@ export default function HomePage() {
           {/* About Me Section */}
         <section className="mainSection max-w-[65vw] pr-12">
           {/* <h2 className="text-2xl font-semibold mb-4">About Me</h2> */}
-          <p className="text-lg leading-relaxed antialiased subpixel-antialiased">
-            I’m Mihir Amin, a passionate software developer with experience in creating web applications, solving problems, and learning cutting-edge technologies. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quia sed dignissimos dolores doloremque! Velit amet neque aliquam fuga autem magnam harum tempore blanditiis ex eligendi, totam beatae officiis voluptates quibusdam, optio veritatis qui nostrum? Maxime repellendus saepe placeat non quaerat est delectus neque amet illum, tenetur tempore fugit laborum similique omnis assumenda. Reprehenderit non possimus nisi sapiente nihil. Beatae, aspernatur dolorum ad assumenda velit, numquam cupiditate deleniti voluptatem, minus vero voluptas? Reiciendis, tempore quis totam aut ab iste. Alias omnis, ab voluptate placeat quas incidunt at soluta quae. Minima similique veniam sapiente amet reprehenderit quibusdam, esse libero, exercitationem maxime doloribus illo! Necessitatibus, sapiente, eaque tempora beatae molestiae in eveniet qui laudantium voluptates saepe at atque ducimus quae! Commodi assumenda vitae, harum, nam ea sequi delectus labore, voluptas maiores doloremque eveniet pariatur? Laborum cumque nesciunt ex hic obcaecati temporibus, totam nihil, itaque ipsa debitis culpa iste dolores incidunt repudiandae quis.
-          </p>
-          <a
-            href="/resume.pdf"
-            download
-            className="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 antialiased subpixel-antialiased"
-          >
-            Download Resume
-          </a>
+          <div className="sectionFlexedForResume flex flex-col justify-between h-[25em]">
+            <p className="text-lg leading-relaxed antialiased subpixel-antialiased">
+              I’m Mihir Amin, a passionate software developer with experience in creating web applications, solving problems, and learning cutting-edge technologies. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quia sed dignissimos dolores doloremque! Velit amet neque aliquam fuga autem magnam harum tempore blanditiis ex eligendi, totam beatae officiis voluptates quibusdam, optio veritatis qui nostrum? Maxime repellendus saepe placeat non quaerat est delectus neque amet illum, tenetur tempore fugit laborum similique omnis assumenda. Reprehenderit non possimus nisi sapiente nihil. Beatae, aspernatur dolorum ad assumenda velit, numquam cupiditate deleniti voluptatem, minus vero voluptas? Reiciendis, tempore quis totam aut ab iste. Alias omnis, ab voluptate placeat quas incidunt at soluta quae. Minima similique veniam sapiente amet reprehenderit quibusdam, esse libero, exercitationem maxime doloribus illo! Necessitatibus, sapiente, eaque tempora beatae molestiae in eveniet qui laudantium voluptates saepe at atque ducimus quae! Commodi assumenda vitae, harum, nam ea sequi delectus labore, voluptas maiores doloremque eveniet pariatur? Laborum cumque nesciunt ex hic obcaecati temporibus, totam nihil, itaque ipsa debitis culpa iste dolores incidunt repudiandae quis.
+            </p>
+            <a
+              href="/resume.pdf"
+              download
+              className="inline-block px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 antialiased subpixel-antialiased max-w-[10.6vw]">
+              Download Resume
+            </a>
+          </div>
         </section>
 
         {/* Experience Section */}
