@@ -9,10 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.1.10",
+    "@mui/material": "^6.1.10",
     "@tailwindcss/typography": "^0.5.15",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "next": "15.0.4",
+    "next-auth": "^4.24.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "remark": "^15.0.1",
