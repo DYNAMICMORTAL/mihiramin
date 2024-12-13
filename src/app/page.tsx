@@ -5,9 +5,27 @@ import '../app/styles/homepage.css'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { Button } from "@/components/ui/button"
+import { Loader2 } from "lucide-react"
+import { useState } from 'react';
 
 export default function HomePage() {
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleDownload = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      const link = document.createElement('a');
+      link.href = '/resume.pdf';
+      link.download = 'resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setIsLoading(false);
+    }, 600); // 500ms delay
+  };
+
   return (
     <main className="container mx-auto px-4 py-8 antialiased subpixel-antialiased">
       {/* Header Section */}
@@ -16,13 +34,13 @@ export default function HomePage() {
           <h1 className="text-5xl font-bold antialiased subpixel-antialiased">Mihir Amin</h1>
         </header>
         <nav className="flex flex-col antialiased subpixel-antialiased">
-          <Link href="/" legacyBehavior>
+          <Link prefetch href="/" legacyBehavior>
             <a className="text-xl text-black font-medium underline decoration-sky-500/30 decoration-2 hover:underline antialiased subpixel-antialiased">Home</a>
           </Link>
-          <Link href="/blog" legacyBehavior>
+          <Link prefetch href="/blog" legacyBehavior>
             <a className="text-xl text-black font-medium underline decoration-pink-500/30 decoration-2 hover:underline antialiased subpixel-antialiased">Blog</a>
           </Link>
-          <Link href="/projects" legacyBehavior>
+          <Link prefetch href="/projects" legacyBehavior>
             <a className="text-xl text-black font-medium underline decoration-indigo-500/30 decoration-2 hover:underline antialiased subpixel-antialiased">Projects</a>
           </Link>
         </nav>
@@ -34,14 +52,21 @@ export default function HomePage() {
           {/* <h2 className="text-2xl font-semibold mb-4">About Me</h2> */}
           <div className="sectionFlexedForResume flex flex-col justify-between h-[25em]">
             <p className="text-lg leading-relaxed antialiased subpixel-antialiased">
-              I’m Mihir Amin, a passionate software developer with experience in creating web applications, solving problems, and learning cutting-edge technologies. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quia sed dignissimos dolores doloremque! Velit amet neque aliquam fuga autem magnam harum tempore blanditiis ex eligendi, totam beatae officiis voluptates quibusdam, optio veritatis qui nostrum? Maxime repellendus saepe placeat non quaerat est delectus neque amet illum, tenetur tempore fugit laborum similique omnis assumenda. Reprehenderit non possimus nisi sapiente nihil. Beatae, aspernatur dolorum ad assumenda velit, numquam cupiditate deleniti voluptatem, minus vero voluptas? Reiciendis, tempore quis totam aut ab iste. Alias omnis, ab voluptate placeat quas incidunt at soluta quae. Minima similique veniam sapiente amet reprehenderit quibusdam, esse libero, exercitationem maxime doloribus illo! Necessitatibus, sapiente, eaque tempora beatae molestiae in eveniet qui laudantium voluptates saepe at atque ducimus quae! Commodi assumenda vitae, harum, nam ea sequi delectus labore, voluptas maiores doloremque eveniet pariatur? Laborum cumque nesciunt ex hic obcaecati temporibus, totam nihil, itaque ipsa debitis culpa iste dolores incidunt repudiandae quis.
+              I am a GenAI, Web and App Development enthusiast with a keen passion for Cloud Computing. I'm in Third Year Engineering with Bachelors in Computers from Mumbai University.<br />
+              {/* I'm Head of Technical Team and have speargheaded Technical and Cultural Festivals. I'm a Core Member at Artifical Intelligence and Machine Learning Club, Data Science and Analytics Club.
+              <br /> */}
+              My experience in web and mobile app development focuses on crafting user-centric, scalable solutions that enhance engagement and retention. By aligning development with business objectives, I create applications that drive user satisfaction and contribute to sustainable company growth.
             </p>
-            <a
-              href="/resume.pdf"
-              download
-              className="inline-block px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 antialiased subpixel-antialiased max-w-[10.6vw]">
-              Download Resume
-            </a>
+            <Button onClick={handleDownload} disabled={isLoading} className="px-6 py-2 bg-[#d2c4c4] hover:bg-[#d2c4c4] text-black rounded antialiased subpixel-antialiased max-w-[7.5vw]">
+              {isLoading ? (
+                <>
+                  <Loader2 className="animate-spin mr-2 text-black" />
+                  Please wait
+                </>
+              ) : (
+                `Resume`
+              )}
+            </Button>
           </div>
         </section>
 
