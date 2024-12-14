@@ -1,5 +1,5 @@
 ---
-title: "CRM Project"
+title: "S.M.I.L.E CRM"
 images:
   - "/images/crm-1.png"
   - "/images/crm-2.png"

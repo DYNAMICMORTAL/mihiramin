@@ -23,7 +23,7 @@ export default function HomePage() {
       link.click();
       document.body.removeChild(link);
       setIsLoading(false);
-    }, 600); // 500ms delay
+    }, 700); // 500ms delay
   };
 
   return (
@@ -34,13 +34,13 @@ export default function HomePage() {
           <h1 className="text-5xl font-bold antialiased subpixel-antialiased">Mihir Amin</h1>
         </header>
         <nav className="flex flex-col antialiased subpixel-antialiased">
-          <Link prefetch href="/" legacyBehavior>
+          <Link href="/" legacyBehavior>
             <a className="text-xl text-black font-medium underline decoration-sky-500/30 decoration-2 hover:underline antialiased subpixel-antialiased">Home</a>
           </Link>
-          <Link prefetch href="/blog" legacyBehavior>
+          <Link href="/blog" legacyBehavior>
             <a className="text-xl text-black font-medium underline decoration-pink-500/30 decoration-2 hover:underline antialiased subpixel-antialiased">Blog</a>
           </Link>
-          <Link prefetch href="/projects" legacyBehavior>
+          <Link href="/projects" legacyBehavior>
             <a className="text-xl text-black font-medium underline decoration-indigo-500/30 decoration-2 hover:underline antialiased subpixel-antialiased">Projects</a>
           </Link>
         </nav>
@@ -71,14 +71,12 @@ export default function HomePage() {
         </section>
 
         {/* Experience Section */}
-        <section className="my-12 experience">
+        {/* <section className="my-12 experience">
           <h2 className="text-2xl font-semibold mb-4 antialiased subpixel-antialiased">Experience</h2>
           <ul className="list-disc pl-5 space-y-2 antialiased subpixel-antialiased">
             <li>Core Engineer at OJUS-APSIT</li>
-            <li>Contributor to AI, Cloud, and Security Projects</li>
-            <li>Open Source Enthusiast</li>
           </ul>
-        </section>
+        </section> */}
       </div>
 
       <div className="mailAndSocials flex flex-col max-w-[30vw]">
